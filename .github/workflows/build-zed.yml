@@ -16,6 +16,9 @@ jobs:
       - name: Checkout sources
         uses: actions/checkout@v4
 
+      - name: Enable Git long paths
+        run: git config --system core.longpaths false
+
       - name: Clone zed
         run: git clone https://github.com/zed-industries/zed.git
 
